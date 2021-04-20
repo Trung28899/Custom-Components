@@ -25,6 +25,19 @@
   transform: translateY(-150%);
 }
 
+.closeButton {
+  position: absolute;
+  font-size: 1.25rem;
+  right: 0;
+  top: 0;
+  margin: 1.5vh 1vw;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #2960ed;
+}
+
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -39,7 +52,7 @@
 
 .input {
   flex: 1;
-  height: 30vh;
+  height: fit-content;
   margin-top: 12.5vh;
   padding-top: 10vh;
   padding-bottom: 10vh;
@@ -53,42 +66,84 @@
   margin-top: 20vh;
 }
 
-.thumbnailContainer img {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-}
-
 .btnContainer {
   display: flex;
   justify-content: space-evenly;
 }
 
-.btnContainer div {
+.btnContainer div,
+.btnContainer label {
   height: 3vh;
   width: 8vw;
   border-radius: 5px;
   padding-top: 0.5vh;
-  border: 1px solid black;
+  border: 0.5px solid rgb(223, 223, 223);
   cursor: pointer;
   font-weight: 600;
   margin-top: 1vh;
 }
 
-.btnContainer div:nth-of-type(1) {
+.btnContainer label {
+  cursor: pointer;
   background-color: whitesmoke;
 }
 
-.btnContainer div:nth-of-type(1):hover {
+.btnContainer label:hover {
   background-color: rgb(223, 223, 223);
 }
 
-.btnContainer div:nth-of-type(2) {
+.btnContainer div:nth-of-type(1) {
   background-color: rgb(255, 202, 196);
 }
 
-.btnContainer div:nth-of-type(2):hover {
+.btnContainer div:nth-of-type(1):hover {
   background-color: rgb(253, 173, 165);
+}
+
+.LinkBox {
+  position: relative;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e4e4e4;
+  margin: 30px auto;
+  height: 60px;
+  border-radius: 7px;
+  cursor: pointer;
+  backdrop-filter: blur(15.4368px);
+  padding: 10px;
+
+  -moz-box-shadow: 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+.thumbnailContainer img,
+.LinkBox img {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 12px;
+  padding: 0 auto;
+  object-fit: cover;
+}
+
+.LinkBox div:nth-of-type(1) {
+  flex: 1;
+  margin: auto;
+}
+
+.LinkBox div:nth-of-type(2) {
+  flex: 2;
+  margin: auto;
+  align-items: center;
+  font-weight: 600;
+}
+
+.LinkBox div:nth-of-type(3) {
+  flex: 1;
+  margin: auto;
+  margin-right: -20px !important;
 }
 
 @media screen and (max-width: 1025px) {
@@ -106,6 +161,32 @@
   }
 }
 
+@media screen and (min-height: 1199px) and (min-width: 1100px) {
+  .Modal {
+    height: 70vh;
+  }
+  .input {
+    margin-top: 12.5vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  .output {
+    flex: 1;
+    height: 20vh;
+    margin-top: 20vh;
+  }
+
+  .btnContainer div,
+  .btnContainer label {
+    height: 2vh;
+    width: 8vw;
+    border-radius: 5px;
+    padding-top: 0.5vh;
+    margin-top: 0.75vh;
+  }
+}
+
 /*
     Styling Tablet
 */
@@ -114,36 +195,65 @@
   .output {
     background-color: white;
     margin: 15vh 3vw;
+    margin-bottom: 5vh;
   }
 
   .input {
+    height: fit-content !important;
     flex: 1;
     height: 60vh;
+    padding: 10% 2%;
   }
 
   .output {
-    height: 15vh;
+    margin-top: 20vh;
+    height: fit-content;
+    padding: 2% 0%;
+  }
+
+  .btnContainer div,
+  .btnContainer label {
+    height: 2vh;
+    width: 12vw;
+    padding-top: 0.25vh;
+    padding-bottom: 0.2vh;
+    margin-top: 0.5vh;
+    font-size: 0.95rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  /* .Modal {
+  .Modal {
     background-color: white;
-  } */
+  }
 
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-top: 10vh;
   }
 
   .input,
   .output {
-    background-color: red;
     width: 90vw;
     margin: 0vh auto;
+    margin-bottom: 2vh;
+  }
+
+  .output {
+    width: 100vw;
   }
 
   .input {
     flex: 1;
+  }
+
+  .btnContainer div,
+  .btnContainer label {
+    height: 2vh;
+    width: 25vw;
+    font-size: 0.85rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 0.95vh;
   }
 }
