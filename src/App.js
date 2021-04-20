@@ -1,5 +1,11 @@
+import ModalScreen from "./screen/ModalScreen/ModalScreen";
+
 function App() {
-  return <div>This is it</div>;
+  return (
+    <div style={{ backgroundColor: "white" }}>
+      <ModalScreen />
+    </div>
+  );
 }
 
 export default App;

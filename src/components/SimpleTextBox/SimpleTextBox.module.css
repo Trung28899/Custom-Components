@@ -1,0 +1,39 @@
+.input {
+  position: relative;
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 16px 27px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #000000;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+  margin-top: 1vh;
+}
+
+.input:focus {
+  outline: none !important;
+  background: rgba(41, 96, 237, 0.05);
+  border: 1px solid #2960ed;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.maxLengthReached {
+  color: red;
+}
+
+.maxLengthReached small {
+  position: relative;
+  margin-top: 1vh;
+}
+
+@media screen and (max-width: 767px) {
+  .input {
+    font-weight: 800;
+    padding: 12px 20px;
+    font-size: 0.75rem;
+  }
+}

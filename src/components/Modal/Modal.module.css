@@ -1,0 +1,149 @@
+.Modal {
+  position: fixed;
+  z-index: 200;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  background-color: rgb(243, 245, 246);
+  padding-bottom: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  top: 10vh;
+  left: 15vw;
+  width: 70vw;
+  transition: all 0.5s linear;
+  height: 80vh;
+}
+
+.ModalOpen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* opacity: 0 make the component disappear*/
+.ModalClosed {
+  opacity: 0;
+  transform: translateY(-150%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input,
+.output {
+  border-radius: 12px;
+  background-color: white;
+  margin: 5vh 2vw;
+}
+
+.input {
+  flex: 1;
+  height: 30vh;
+  margin-top: 12.5vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.output {
+  flex: 1;
+  height: 30vh;
+  margin-top: 20vh;
+}
+
+.thumbnailContainer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnContainer div {
+  height: 3vh;
+  width: 8vw;
+  border-radius: 5px;
+  padding-top: 0.5vh;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1vh;
+}
+
+.btnContainer div:nth-of-type(1) {
+  background-color: whitesmoke;
+}
+
+.btnContainer div:nth-of-type(1):hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.btnContainer div:nth-of-type(2) {
+  background-color: rgb(255, 202, 196);
+}
+
+.btnContainer div:nth-of-type(2):hover {
+  background-color: rgb(253, 173, 165);
+}
+
+@media screen and (max-width: 1025px) {
+  .Modal {
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .input,
+  .output {
+    background-color: white;
+    margin: 10vh 2vw;
+  }
+}
+
+/*
+    Styling Tablet
+*/
+@media screen and (min-height: 1000px) and (max-width: 1025px) {
+  .input,
+  .output {
+    background-color: white;
+    margin: 15vh 3vw;
+  }
+
+  .input {
+    flex: 1;
+    height: 60vh;
+  }
+
+  .output {
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* .Modal {
+    background-color: white;
+  } */
+
+  .container {
+    flex-direction: column;
+    margin-top: 10vh;
+  }
+
+  .input,
+  .output {
+    background-color: red;
+    width: 90vw;
+    margin: 0vh auto;
+  }
+
+  .input {
+    flex: 1;
+  }
+}
