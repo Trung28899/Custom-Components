@@ -87,8 +87,12 @@ const Modal = () => {
             <h5>Image Thumbnail (size limit 10mb)</h5>
             <div className={classes.btnContainer}>
               {icon && <img src={icon} alt="" />}
-              <label htmlFor="input">Add Image</label>
-              <div onClick={deleteImage}>Delete</div>
+              <label htmlFor="input">
+                <i className="fas fa-folder-plus"></i> Add Image
+              </label>
+              <div onClick={deleteImage}>
+                <i className="fas fa-trash"></i>
+              </div>
             </div>
           </div>
         </div>
