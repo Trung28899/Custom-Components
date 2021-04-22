@@ -21,6 +21,8 @@ const Modal = () => {
     setIcon("");
   };
 
+  console.log(url);
+
   const imageHandler = async (e) => {
     const reader = new FileReader();
     reader.onload = () => {

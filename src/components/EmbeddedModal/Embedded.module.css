@@ -1,0 +1,44 @@
+.Modal {
+  position: fixed;
+  z-index: 200;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  background-color: rgb(243, 245, 246);
+  padding-bottom: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  top: 10vh;
+  left: 15vw;
+  width: 70vw;
+  transition: all 0.5s linear;
+  height: 80vh;
+}
+
+.output {
+  height: 20vw;
+  width: 35vw;
+  border-radius: 12px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1025px) {
+  .Modal {
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-height: 1199px) and (min-width: 1100px) {
+  .Modal {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Modal {
+    background-color: white;
+  }
+}
