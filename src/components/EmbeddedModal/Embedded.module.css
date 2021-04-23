@@ -8,18 +8,56 @@
   text-align: center;
   box-sizing: border-box;
   top: 10vh;
-  left: 15vw;
-  width: 70vw;
+  left: 25vw;
+  width: 50vw;
   transition: all 0.5s linear;
-  height: 80vh;
+  height: 75vh;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.title span {
+  color: #d9534f;
+}
+
+.closeButton {
+  position: absolute;
+  font-size: 1.25rem;
+  right: 0;
+  top: 0;
+  margin: 1.5vh 1vw;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #2960ed;
 }
 
 .output {
-  height: 20vw;
-  width: 35vw;
+  height: 22.5vw;
+  width: 40vw;
   border-radius: 12px;
   margin: auto;
   overflow: hidden;
+}
+
+.input {
+  margin: 2.5vh 6vw;
+}
+
+.button {
+  width: fit-content;
+  padding: 1vh 2.5vw;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  background-color: #2960ed;
+  margin: auto;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1025px) {
@@ -29,16 +67,58 @@
     width: 100vw;
     height: 100vh;
   }
-}
 
-@media screen and (min-height: 1199px) and (min-width: 1100px) {
-  .Modal {
-    height: 70vh;
+  .title {
+    font-size: 1.75rem;
+    margin-top: 15vh;
+  }
+
+  .output {
+    height: 50vw;
+    width: 85vw;
+  }
+
+  .input {
+    margin: 2.5vh 25vw;
+  }
+
+  .closeButton {
+    position: absolute;
+    font-size: 1.5rem;
+    right: 0;
+    top: auto;
+    bottom: 0vh;
+    margin: 1.5vh 1.75vw;
+    cursor: pointer;
   }
 }
 
 @media screen and (max-width: 600px) {
   .Modal {
     background-color: white;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 15vh;
+  }
+
+  .output {
+    height: 56vw;
+    width: 95vw;
+  }
+
+  .input {
+    margin: 2.5vh 10vw;
+  }
+
+  .closeButton {
+    position: absolute;
+    font-size: 1.25rem;
+    right: 0;
+    top: auto;
+    bottom: 0vh;
+    margin: 1.5vh 1.75vw;
+    cursor: pointer;
   }
 }
