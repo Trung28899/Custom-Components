@@ -1,0 +1,125 @@
+.LinkBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 0.735088px solid #e4e4e4;
+  max-width: 360px;
+  margin: 20px auto;
+  height: 60px;
+  border-radius: 7px;
+  cursor: pointer;
+  backdrop-filter: blur(15.4368px);
+  padding: 10px;
+
+  -moz-box-shadow: 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+.LinkBoxPreview {
+  position: relative;
+}
+
+.pPreview {
+  position: relative;
+}
+
+.socialIconWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.iconPlate {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.socialIcon {
+  height: 30px;
+  margin-top: 15px;
+}
+
+.emailIcon {
+  height: 20px;
+  margin-top: 20px;
+}
+
+.content {
+  position: relative;
+  font-size: 1rem;
+  flex: 2;
+  margin: auto auto;
+  padding-top: 0.85vh;
+}
+
+.directIcon {
+  position: relative;
+  font-size: 1rem;
+  flex: 1;
+  margin: auto;
+}
+
+.contentOver25 {
+  height: 80px !important;
+}
+
+.contentOver35 {
+  height: 120px !important;
+}
+
+.LinkBoxNoImg {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.h2LongString {
+  left: -19%;
+}
+
+.h2noImg {
+  position: relative;
+  text-align: center;
+}
+
+.p {
+  font-weight: 600;
+  font-size: 17.6421px;
+  margin: 0 0 5px;
+}
+
+.customImage {
+  position: relative;
+  flex: 1;
+  text-align: start;
+  padding: auto 0vw;
+}
+
+.customImage img {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .LinkBox {
+    margin: 12px auto;
+    height: 60px;
+    padding: 10px;
+    width: 80vw;
+  }
+  .p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 0 5px;
+  }
+  .LinkBoxPreview {
+    width: 65vw !important;
+  }
+
+  .pPreview {
+    font-size: 0.6rem !important;
+  }
+}
