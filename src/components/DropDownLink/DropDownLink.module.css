@@ -17,10 +17,12 @@
 
 .bankIcon {
   position: absolute;
-  width: 50%;
-  left: 25%;
+  width: 40%;
+  left: 30%;
+  height: 50px;
   align-self: auto;
   margin-top: 1%;
+  object-fit: contain;
 }
 
 .directIconBank {
@@ -32,10 +34,12 @@
 
 .bankIconOpen {
   position: absolute;
-  width: 50%;
-  left: 25%;
+  width: 40%;
+  height: 50px;
+  left: 30%;
   align-self: auto;
   margin-top: 1%;
+  object-fit: contain;
 }
 
 .directIconBankOpen {

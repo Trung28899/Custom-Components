@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./NewLinkBox.module.css";
 import classes from "./DropDownLink.module.css";
-import bank from "../../assets/bank.png";
+import bank from "../../assets/bank1.png";
 
 const DropDownLink = () => {
   const [open, setOpen] = useState(false);
