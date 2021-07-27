@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Analytic.module.css";
+// import classes from "./Analytic.module.css";
 import { data } from "./data";
 
 const Analytic = () => {
