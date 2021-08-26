@@ -6,6 +6,7 @@ import TikTok from "./screen/TikTokEmbed/TikTok";
 import BottomNav from "./screen/BottomNav/BottomNav";
 import Charts from "./screen/Charts/Charts";
 import { Route, Switch } from "react-router-dom";
+import InstagramScreen from "./screen/InstagramEmbed/Insta";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/drop" component={DropDownScreen} />
         <Route path="/tiktok" component={TikTok} />
         <Route path="/embedded" component={YoutubeEmbedded} />
+        <Route path="/instagram" component={InstagramScreen} />
         <Route path="/nav" component={BottomNav} />
         <Route path="/charts" component={Charts} />
         <Route path="/" exact component={ModalScreen} />
