@@ -3,12 +3,13 @@ import classes from "./Insta.module.css";
 // import InstagramEmbed from "react-instagram-embed";
 
 const Insta = () => {
+  const postLink = "https://www.instagram.com/p/BiZ3vxTn1y1/";
   return (
     <div className={classes.insta}>
       <blockquote
         className="instagram-media"
         data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/p/BVH9223gpws/"
+        data-instgrm-permalink={postLink}
         data-instgrm-version="12"
         style={{
           background: "#fff",
@@ -28,7 +29,7 @@ const Insta = () => {
       >
         <div style={{ padding: "16px" }}>
           <a
-            href="https://www.instagram.com/p/BVH9223gpws/"
+            href={postLink}
             style={{
               background: "#FFFFFF",
               lineHeight: "0",
