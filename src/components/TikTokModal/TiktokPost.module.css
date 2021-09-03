@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  width: 325px !important;
+  height: 565px !important;
+  border-radius: 12px;
+  border: 1px grey solid;
+  margin: 0px auto;
+  margin-top: 50px;
+  padding: 0px !important;
+  overflow-y: hidden !important;
+}
+
+.blockStyle {
+  margin: 0px !important;
+}

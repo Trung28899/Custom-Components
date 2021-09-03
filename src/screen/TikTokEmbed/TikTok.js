@@ -1,12 +1,12 @@
 import React from "react";
-import BackDrop from "../../components/BackDrop/BackDrop";
-import TikTokModal from "../../components/TikTokModal/TikTokModal";
+// import BackDrop from "../../components/BackDrop/BackDrop";
+import TikTokPost from "../../components/TikTokModal/TiktokPost";
 
 const ModalScreen = () => {
   return (
     <div>
-      <TikTokModal />
-      <BackDrop show />
+      <TikTokPost />
+      {/* <BackDrop show /> */}
     </div>
   );
 };

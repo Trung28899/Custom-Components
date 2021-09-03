@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./BottomNav.module.css";
+import InstaPost from "../InstagramEmbed/Insta";
 
 const BottomNav = () => {
   return (
@@ -17,6 +18,9 @@ const BottomNav = () => {
           <i className="fas fa-shopping-cart fa-lg"></i>
           <span className={classes.nav_text}>Bán Hàng</span>
         </div>
+      </div>
+      <div>
+        <InstaPost />
       </div>
     </div>
   );

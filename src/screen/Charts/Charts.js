@@ -2,6 +2,7 @@ import React from "react";
 import PieChart from "../../components/Charts/PieChart";
 import BarChart from "../../components/Charts/BarChart";
 import AreaChart from "../../components/Charts/AreaChart";
+// import InstaPost from "../InstagramEmbed/Insta";
 
 const Charts = () => {
   return (
