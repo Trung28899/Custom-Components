@@ -1,35 +1,30 @@
 import React from "react";
-import classes from "./Insta.module.css";
-// import InstagramEmbed from "react-instagram-embed";
+import classes from "./Reel.module.css";
 
-const Insta = () => {
-  const postLink = "https://www.instagram.com/reel/CPdLgpOJ0-R/";
+const Reel = () => {
   return (
     <div className={classes.insta}>
       <blockquote
-        className="instagram-media"
+        class="instagram-media"
         data-instgrm-captioned
-        data-instgrm-permalink={postLink}
-        data-instgrm-version="12"
+        data-instgrm-permalink="https://www.instagram.com/reel/CSv89xvpBbR/?utm_source=ig_embed&amp;utm_campaign=loading"
+        data-instgrm-version="13"
         style={{
-          background: "#fff",
-          border: "0",
-          borderRadius: "12px",
-          boxShadow:
-            "0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15)",
+          background: "#FFF",
+          border: 0,
+          borderRadius: "3px",
+          boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
           margin: "1px",
           maxWidth: "540px",
           minWidth: "326px",
           padding: "0",
           width: "99.375%",
-          marginTop: "50px",
-          //   width: "-webkit-calc(100% - 2px)",
-          //   width: "calc(100% - 2px)",
         }}
       >
         <div style={{ padding: "16px" }}>
+          {" "}
           <a
-            href={postLink}
+            href="https://www.instagram.com/reel/CSv89xvpBbR/?utm_source=ig_embed&amp;utm_campaign=loading"
             style={{
               background: "#FFFFFF",
               lineHeight: "0",
@@ -42,6 +37,7 @@ const Insta = () => {
             target="_blank"
             rel="noreferrer"
           >
+            {" "}
             <div
               style={{
                 display: "flex",
@@ -49,6 +45,7 @@ const Insta = () => {
                 alignItems: "center",
               }}
             >
+              {" "}
               <div
                 style={{
                   backgroundColor: "F4F4F4",
@@ -58,7 +55,7 @@ const Insta = () => {
                   marginRight: "14px",
                   width: "40px",
                 }}
-              ></div>
+              ></div>{" "}
               <div
                 style={{
                   display: "flex",
@@ -67,6 +64,7 @@ const Insta = () => {
                   justifyContent: "center",
                 }}
               >
+                {" "}
                 <div
                   style={{
                     backgroundColor: "#F4F4F4",
@@ -76,7 +74,7 @@ const Insta = () => {
                     marginBottom: "6px",
                     width: "100px",
                   }}
-                ></div>
+                ></div>{" "}
                 <div
                   style={{
                     backgroundColor: "#F4F4F4",
@@ -88,7 +86,7 @@ const Insta = () => {
                 ></div>
               </div>
             </div>
-            <div style={{ padding: "19% 0" }}></div>
+            <div style={{ padding: "19% 0" }}></div>{" "}
             <div
               style={{
                 display: "block",
@@ -118,6 +116,7 @@ const Insta = () => {
               </svg>
             </div>
             <div style={{ paddingTop: "8px" }}>
+              {" "}
               <div
                 style={{
                   color: "#3897f0",
@@ -141,6 +140,7 @@ const Insta = () => {
               }}
             >
               <div>
+                {" "}
                 <div
                   style={{
                     backgroundColor: "#F4F4F4",
@@ -149,7 +149,7 @@ const Insta = () => {
                     width: "12.5px",
                     transform: "translateX(0px) translateY(7px)",
                   }}
-                ></div>
+                ></div>{" "}
                 <div
                   style={{
                     backgroundColor: "#F4F4F4",
@@ -172,6 +172,7 @@ const Insta = () => {
                 ></div>
               </div>
               <div style={{ marginLeft: "8px" }}>
+                {" "}
                 <div
                   style={{
                     backgroundColor: "#F4F4F4",
@@ -221,12 +222,74 @@ const Insta = () => {
                   }}
                 ></div>
               </div>
+            </div>{" "}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                flexGrow: "1",
+                justifyContent: "center",
+                marginBottom: "24px",
+              }}
+            >
+              {" "}
+              <div
+                style={{
+                  backgroundColor: "#F4F4F4",
+                  borderRadius: "4px",
+                  flexGrow: "0",
+                  height: "14px",
+                  marginBottom: "6px",
+                  width: "224px",
+                }}
+              ></div>{" "}
+              <div
+                style={{
+                  backgroundColor: "#F4F4F4",
+                  borderRadius: "4px",
+                  flexGrow: "0",
+                  height: "14px",
+                  width: "144px",
+                }}
+              ></div>
             </div>
           </a>
+          <p
+            style={{
+              color: "#c9c8cd",
+              fontFamily: "Arial,sans-serif",
+              fontSize: "14px",
+              lineHeight: "17px",
+              marginBottom: "0",
+              marginTop: "8px",
+              overflow: "hidden",
+              padding: "8px 0 7px",
+              textAlign: "center",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <a
+              href="https://www.instagram.com/reel/CSv89xvpBbR/?utm_source=ig_embed&amp;utm_campaign=loading"
+              style={{
+                color: "#c9c8cd",
+                fontFamily: "Arial,sans-serif",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: "normal",
+                lineHeight: "17px",
+                textDecoration: "none",
+              }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              A post shared by Thẻ Cá Nhân Thông Minh (@onthecard)
+            </a>
+          </p>
         </div>
-      </blockquote>
+      </blockquote>{" "}
     </div>
   );
 };
 
-export default Insta;
+export default Reel;
