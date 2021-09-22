@@ -15,3 +15,11 @@
     - Might be applicable for Tiktok
     - Remember to look on public/index.html
         Put: <script async src="//www.instagram.com/embed.js"></script>
+
+## 3. Swipe Slider:
+
+    - Guides:
+        https://www.npmjs.com/package/react-touch-drag-slider
+    - Git Repo (JS):
+        https://github.com/bushblade/Full-Screen-Touch-Slider
+    - See: http://localhost:3000/swipe
