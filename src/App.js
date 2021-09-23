@@ -9,6 +9,7 @@ import { Route, Switch } from "react-router-dom";
 import InstagramScreen from "./screen/InstagramEmbed/Insta";
 import Reel from "./screen/InstaReel/Reel";
 import Slider from "./screen/Slider/Slider";
+import DragDrop from "./screen/DragDrop/DragDrop";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/nav" component={BottomNav} />
         <Route path="/charts" component={Charts} />
         <Route path="/swipe" component={Slider} />
+        <Route path="/dragdrop" component={DragDrop} />
         <Route path="/" exact component={ModalScreen} />
       </Switch>
     </div>

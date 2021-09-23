@@ -23,3 +23,10 @@
     - Git Repo (JS):
         https://github.com/bushblade/Full-Screen-Touch-Slider
     - See: http://localhost:3000/swipe
+
+## 4. DragDrop:
+
+    - Guides: See "Examples and samples" in the repo
+        https://github.com/atlassian/react-beautiful-dnd
+        > click "Simple vertical list"
+    - /dragdrop
