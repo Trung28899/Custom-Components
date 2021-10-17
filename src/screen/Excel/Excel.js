@@ -4,9 +4,9 @@ import * as XLSX from "xlsx";
 
 const Excel = () => {
   const apiData = [
-    { index: 1, name: "trung" },
-    { index: 2, name: "Linh" },
-    { index: 3, name: "Dumbo" },
+    { "User Index": 1, name: "trung" },
+    { "User Index": 2, name: "Linh" },
+    { "User Index": 3, name: "Dumbo" },
   ];
   const fileName = "OTC";
 
