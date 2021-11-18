@@ -12,7 +12,7 @@ const config = {
   storageBucket: "onthecard2021.appspot.com",
   messagingSenderId: "1008594664326",
   appId: "1:1008594664326:web:2035d0cf73e1e99e250a07",
-  measurementId: "G-NJLCFTNKHY"
+  measurementId: "G-NJLCFTNKHY",
 };
 
 class Firebase {
@@ -139,6 +139,12 @@ class Firebase {
       .put(imageObject);
   }
 
+  updateFiles(imageObject, imageName, userEmail) {
+    return this.storage
+      .ref("files/" + userEmail + "/" + imageName)
+      .put(imageObject);
+  }
+
   incrementUsers(userNumber) {
     const incre = userNumber + 1;
     console.log("in increment user");
@@ -242,6 +248,10 @@ class Firebase {
         email: dataObject.email,
       });
     }
+  }
+
+  storageObject() {
+    return firebase.storage();
   }
 }
 

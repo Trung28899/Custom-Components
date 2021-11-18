@@ -46,3 +46,7 @@
         https://www.udemy.com/course/masteringd3js/
 
         This course is in js, try to implement this in React.js
+
+## 6. Getting IP Data and browser information:
+
+    - ./screens/ModalScreen/ModalScreen.js

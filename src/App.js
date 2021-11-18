@@ -11,6 +11,7 @@ import Reel from "./screen/InstaReel/Reel";
 import Slider from "./screen/Slider/Slider";
 import DragDrop from "./screen/DragDrop/DragDrop";
 import Excel from "./screen/Excel/Excel";
+import PDF from "./screen/PDF/PDF";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/swipe" component={Slider} />
         <Route path="/dragdrop" component={DragDrop} />
         <Route path="/excel" component={Excel} />
+        <Route path="/pdf" exact component={PDF} />
         <Route path="/" exact component={ModalScreen} />
       </Switch>
     </div>

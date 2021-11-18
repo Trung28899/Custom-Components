@@ -1,39 +1,57 @@
 import React, { useState } from "react";
 import classes from "./Modal.module.css";
 import SimpleTextBox from "../SimpleTextBox/SimpleTextBox";
-import wordpress from "../../assets/wordpress.png";
 import buttonStyles from "./Button.module.css";
 import firebase from "../../api/firebase";
+import pdf from "./assets/pdf.png";
+import ppt from "./assets/ppt.png";
+import sheets from "./assets/sheets.png";
+import docs from "./assets/docs.png";
+
+const loadImage = (fileExt) => {
+  if (fileExt.includes(".xlsx") || fileExt.includes(".xls")) {
+    return sheets;
+  } else if (fileExt.includes(".ppt") || fileExt.includes(".pptx")) {
+    return ppt;
+  } else if (fileExt.includes(".pdf")) {
+    return pdf;
+  } else {
+    return docs;
+  }
+};
 
 const Modal = () => {
-  const [url, setUrl] = useState("");
   const [title, setTitle] = useState("");
-  const [icon, setIcon] = useState(wordpress);
-  const [imageObject, setImageObject] = useState({ name: "" });
+  const [icon, setIcon] = useState("");
+  const [fileObject, setfileObject] = useState({ name: "" });
   const email = "trevtrinh@gmail.com";
-  const onChangeUrl = (value) => {
-    setUrl(value);
-  };
+
   const onChangeTitle = (value) => {
     setTitle(value);
   };
+
   const deleteImage = () => {
-    setIcon("");
+    setfileObject({ name: "" });
   };
 
-  console.log(url);
-
-  const imageHandler = async (e) => {
+  const fileHandler = async (e) => {
     const reader = new FileReader();
     reader.onload = () => {
       if (reader.readyState === 2) {
-        setIcon(reader.result);
+        // console.log(reader);
       }
     };
     try {
-      const image = e.target.files[0];
-      reader.readAsDataURL(image);
-      setImageObject(image);
+      const file = e.target.files[0];
+
+      const extension = file.name.substring(
+        file.name.length - 5,
+        file.name.length
+      );
+
+      setIcon(loadImage(extension));
+      reader.readAsDataURL(file);
+      setfileObject(file);
     } catch (error) {
       console.log(error.message);
     }
@@ -42,7 +60,7 @@ const Modal = () => {
   const saveImgFirebase = async () => {
     try {
       await firebase.login(email, "trungtrinh");
-      firebase.updateImage(imageObject, imageObject.name, email).on(
+      firebase.updateFiles(fileObject, fileObject.name, email).on(
         "state_changed",
         (snapshot) => {
           //nothing going on
@@ -52,8 +70,8 @@ const Modal = () => {
         },
         () => {
           firebase.storage
-            .ref("images/" + email)
-            .child(imageObject.name)
+            .ref("files/" + email)
+            .child(fileObject.name)
             .getDownloadURL()
             .then((url) => {
               console.log("success: " + url);
@@ -75,32 +93,30 @@ const Modal = () => {
       <div className={classes.container}>
         <div className={classes.input}>
           <SimpleTextBox
-            textHolder="Enter Link Name....."
+            textHolder="Enter File Name....."
             textEntered={onChangeTitle}
             title
             modalShow
           />
-          <SimpleTextBox
-            textHolder="Enter Link....."
-            textEntered={onChangeUrl}
-            modalShow
-          />
-          <div className={classes.thumbnailContainer}>
-            <h5>Image Thumbnail (size limit 10mb)</h5>
-            <div className={classes.btnContainer}>
-              {icon && <img src={icon} alt="" />}
-              <label htmlFor="input">
-                <i className="fas fa-folder-plus"></i> Add Image
-              </label>
-              <div onClick={deleteImage}>
-                <i className="fas fa-trash"></i>
-              </div>
+          <div className={classes.btnContainer}>
+            <label htmlFor="input">
+              <i className="fas fa-folder-plus"></i> Upload File
+            </label>
+            <div onClick={deleteImage}>
+              <i className="fas fa-trash"></i>
             </div>
           </div>
+
+          {fileObject.name && (
+            <div className={classes.demoFile}>
+              <img className={classes.icon} src={icon} alt="" />
+              <p className={classes.fileName}>{fileObject.name}</p>
+            </div>
+          )}
         </div>
 
         <div className={classes.output}>
-          <h3>Preview</h3>
+          <h3>Preview Link</h3>
           <div className={classes.LinkBox}>
             <div>{icon && <img src={icon} alt="" />}</div>
             <div>
@@ -119,11 +135,10 @@ const Modal = () => {
 
       <input
         type="file"
-        accept="image/*"
-        name="image-upload1"
         id="input"
-        onChange={imageHandler}
+        onChange={fileHandler}
         style={{ display: "none" }}
+        accept=".xlsx,.xls,.doc,.docx,.ppt,.pptx,.pdf"
       />
     </div>
   );
